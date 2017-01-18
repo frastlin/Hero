@@ -1,0 +1,194 @@
+﻿ 
+"Tick" redirects here. For information about build ticks, see Clan Citadels.
+The RuneScape clock is a term that is used to refer to the time-frame used for actions in RuneScape. RuneScape runs on units of time of approximately 0.6 seconds which are sometimes called "ticks." All actions are a multiple of this basic tick time. This includes any instant where a message appears in the chat interface, any instant that experience is gained, any instant that a monster spawns, and any other actions a player performs, including animations (hence players being able to perform animations in sync with each other rather easily). Purely client sided occurrences are independent of the game tick (e.g. right-click menus). 
+Each action you register within one tick, will start to take place by the beginning of the next tick. 
+However, Jmods on the Runescape Forum have explicitly said in the Engine Q&A threads in the past that some activities run as fast as 50ms ticks. 
+"Q. As we know and stated by Andrew the game runs at 600ms intervals (one tick). Is there a reason for this exact number? Could the game benefit from lower interval, for example 300ms? 
+A. Some upcoming features in the server tick at a 50ms rate. The overall 600ms tick remains, as the content relies on having this time interval available as a base, but we’re not limited by it.
+Mod_jackh" 
+Contents[show]
+Length of a tickEdit
+Dwarf cannon
+Cannons are a great visual tick timer, as they rotate 45 degrees once every tick.
+The length of a tick can be measured by timing a repeated action using a stopwatch. For example, lighting 25 logs without re-lighting a log takes 100 ticks. If the stopwatch can be stopped to within 0.1 seconds, the tick can be measured to within 0.001 seconds. Another method is to use summoning familiars. Each "minute" that a familiar lasts for is actually 100 ticks. If, for example, you start a timer when a familiar timer goes from 26:00 to 25:30 and stop the timer when it goes from 16:00 to 15:30, this will be exactly 1000 game ticks. 
+Ideally, without any lag, there should be exactly 100 ticks per minute, or 0.600 seconds per tick. However, the observed length of the tick is actually slightly more than this, due to connection speed and the server having to process all the players that are currently logged in. The observed length of the tick is between 0.606 and 0.618 seconds. The tick length is constant throughout a server for all players, which is due to the fact that player's actions are processed in the same order every time, so even if someone is processed last, they will still have the same tick as previously due to them being processed last every time. However, the tick length is not constant from server to server. The more players there are on a server, the longer the tick length; the fewer players are on a server, the shorter the tick length. While there seem to be other factors that affect tick length as well, the number of players on the server seems to be the largest factor. It is typical for ticks on World 2 (usually a full world) to be 0.616 to 0.618 seconds each, whereas ticks on less full worlds typically are 0.606 to 0.611 seconds each. 
+It is possible for a server to lag and "miss" a tick or multiple ticks from time to time. This seems to happen most often on worlds with the greatest number of players. 
+Length of selected actionsEdit
+The length of the following actions are given in ticks. 
+Melee weaponsEdit
+▪Abyssal whip: 4 per hit 
+▪Any scimitar or dagger: 4 per hit 
+▪Any sword, longsword or rapier: 5 per hit 
+▪Godswords, Saradomin sword, Zamorakian spear and Dharok's greataxe: 6 per hit 
+▪Any battleaxe or two-handed sword: 6 per hit 
+Ranged weaponsEdit
+▪Any dart, throwing knife or shortbow: 4 per hit 
+▪Seercull: 4 per hit 
+▪Most crossbows: 4 per hit 
+▪Crystal bow: 5 per hit 
+▪Any longbow, thrownaxe, javelin, sighted longbow, composite bow or god bow: 6 per hit 
+▪Ogre bow, Royal crossbow, Karil's crossbow and Hand cannon: 6 per hit 
+▪Dark Bow: 12 per hit 
+AgilityEdit
+▪Fastest lap of Ape Atoll Agility Course: 65 (Changed from 64 to 65 on the update of 13 May 2010) 
+▪Fastest lap of Extended Barbarian Agility Course: 61 
+▪Fastest lap of Extended Gnome Agility Course: 61 or 64 (randomly depending on which part of the bars the player takes) 
+ConstructionEdit
+▪Building and removing a larder or door or table: 5 per item 
+▪The Demon Butler spends 10 ticks to bank while the Butler needs 20 ticks. 
+CookingEdit
+▪Cooking fish: 4 per food item using the cook-all option.  
+▪Making wine: 1 per wine 
+CraftingEdit
+▪Attaching orbs to battlestaves: 2 per battlestaff 
+▪Crafting d'hide bodies: 3 per body 
+▪Cutting gems: 1 per gem 
+▪Making jewellery: 3 ticks per item 
+▪Glass blowing: 3 ticks per item 
+DungeoneeringEdit
+▪Inbetween dungeons, a timer counts down from 30. These are often assumed to be seconds, but really they are 30 time periods of 2 ticks each, so the timer runs a little over 36 seconds, not 30 seconds. 
+FarmingEdit
+▪Weeds grow every 500 ticks. 
+▪Saplings grow every 500 ticks. 
+FiremakingEdit
+▪Burning logs normally: 4 per log 
+▪Burning logs with a Pyrelord: 5 per log 
+▪Adding logs to a bonfire: 6 per log 
+FishingEdit
+▪Chance of catching a fish from any fishing spot: 5 per fish 
+▪Chance of catching a fish from any fishing spot with a sacred clay harpoon: 8 per fish 
+FletchingEdit
+▪Cutting wood into unstrung bows: 3 per bow 
+▪Stringing a bow: 2 per bow 
+▪Fletching arrows: 2 per set of 15 arrows 
+▪Fletching bolts: 1 per set of 10 
+▪Cutting gems into bolt tips: 4 ticks per gem 
+HerbloreEdit
+▪Putting a herb into a vial: 1 per herb 
+▪Putting a second ingredient into a potion: 2 per potion (an exception is Serum 207, for which the make-x option operates at 1 tick per potion.) 
+▪Cleaning grimy herbs: 1 per herb 
+HuntingEdit
+▪Catching Red chinchompas: 8 per chinchompa (if sufficient box traps are ready to be checked) 
+MagicEdit
+▪Combat spells: 5 per cast 
+▪High Level Alchemy: 5 per cast 
+▪Enchant Jewellery spells: 3 per cast 
+▪Superheat Item: 2 per cast 
+▪Humidify: 3 per cast 
+▪Plank Make: 3 per cast 
+▪Bake Pie: 3 per cast 
+▪String Jewellery: 3 per cast 
+▪Camelot teleport: 4 per cast 
+▪Enchant Crossbow Bolt: 1 or 2 per cast(The game allows this spell to be cast every tick, but it is virtually impossible to do so) 
+▪Vengeance: 50 per cast 
+MiningEdit
+With a rune pickaxe or inferno adze, there is a chance to mine an ore every 3 ticks. 
+This does not apply to rune essence, which comes more frequently than this, or to using a dragon pickaxe, which can mine ores at varying rates. 
+PrayerEdit
+▪POH Altar Offerings: 3 per bone 
+▪Burying bones: 1 per bone (used to be 2) 
+▪Ectofuntus: 1 per bonemeal+slime 
+Prayer activation and deactivation is applied on the next game tick, and the drain rate of each prayer is measured by a number of ticks. 
+RunecraftingEdit
+At fastest, there are 6 ticks between crafts at the Nature altar if 2 or 3 pouches are emptied, or 5 ticks if 1 pouch is emptied. At fastest, there are 5 ticks between crafts at the Ourania altar if 2 or 3 pouches are emptied, or 4 ticks if 1 pouch is emptied. 
+SmithingEdit
+▪Smelting ores at a furnace: 4 per ore 
+▪Forging at an anvil: 4 per item smithed 
+▪Making Cannonballs: 10 per steel bar 
+ThievingEdit
+▪Blackjacking: 6 per round 
+▪A Pyramid Plunder activity is 500 ticks. 
+WoodcuttingEdit
+▪Chance of cutting a log from any type of tree: 4 per chance 
+However, you are not guaranteed a log every 4 ticks; rather, every 4 ticks there is a chance to cut a log. 
+OtherEdit
+▪Running covers 2 squares per tick, while walking covers 1 square per tick. 
+▪Bankers used to count down in ticks when there was a big drop in the falador party room. But as of the Free Trade return on 1 February 2011, they no longer do this. 
+▪The amount of time a player can spend collecting tears in Tears of Guthix is a number of game ticks equal to the player's quest points. 
+▪Boosted or reduced stats move towards normal at a rate of 1 level per 100 ticks, which is just a tiny bit over one minute. 
+▪Player chat messages stay above their heads for 5 ticks. (exception: if a second message is sent sooner it will replace the first and last 5 ticks unless another message is sent sooner etc.) 
+▪The 40 minutes of triple charms reward from Familiarisation seems to actually last around 40.5-41.5 minutes, which would suggest that it is measured as 4000 ticks rather than as 40 actual minutes. 
+▪When playing Fist of Guthix, the person being hunted collects charges every 5 ticks when holding the stone. 
+ApplicationEdit
+In general, knowledge of the RuneScape clock does not matter much, but it can make it easier to time actions. Timing just one of a repeated action may clearly give a tick number, which may be able to be used to estimate experience per hour. For example, Superheat Item, Plank Make, and Bake Pie all are spells that take 3 ticks each and are cast one by one on an inventory of supplies. If it is known that superheat item may be cast about 1800 times per hour, plank make and bake pie would be known to be very nearly the same rate merely by timing a single cast. The 1800 itself could even be estimated without actual measurement by noting that about 5940 ticks per hour divided by 3 ticks per cast is 1980 casts per hour of hypothetical continuous casting, and that 7-10% should be subtracted for mistakes and banking. 
+When playing the Great Orb Project, knowledge of ticks and even incorporating a rhythm for ticks, so that you know how long to attract or repel each orb, is essential for scoring high. The orb moves at one tile per tick. There are 198 ticks from when the first orbs spawn to when the altar ends, and the orbs disappear. Good goppers can count and plan 10's of ticks ahead in one tick, and then execute their combination. Every tick you attract an orb, you give it an instruction to move to a tile that is two tiles closer to you. 
+When the High Level Alchemy animation was changed, there was much argument about whether it was slower or faster. Based on the RuneScape clock, it should have been incredibly clear that the time was not changed, since if there was any change in the speed, it would have to be by a full tick and therefore be extremely noticeable. 
+ProofEdit
+A 0.6 second tick time fits all measured times for repeated actions. 
+Also, in April 2009, Andrew posted a thread in the Game Feedback forum [source needed] about whether a Prayer update caused delay in prayer being activated, and he brought up the point that if prayer really was slower, it would have to be a full 0.6 seconds slower because RuneScape runs on units of time of 0.6 seconds. 
+Andrew: "Also it is not possible for it to be just a tiny bit slower than before either. The game 'ticks' at 600 millisecond intervals, so if the script was broken (like it was previously) then it would be a full extra 600 milliseconds slower which would be obvious when clicking and counting. It's not possible for an error to cause it to be something other than a multiple of 600 milliseconds slower." 
+Categories:
+Mechanics 
+Add category 
+ref=cs_aap_8784616819371 pn=1&…
+  
+wyciwyg://61/http://ad.doubleclick.net/adi/N5271.160337.AMAZON.COM/B8175143.23;sz=300x250;pc=;click=http://adclick.g.doubleclick.net/aclk?sa=L&ai=CIUgcjtT5U-7TKouckwSz4oGgDY3G3J4Ejan9mzLAjbcBEAEgAFCAx-HEBGDJ1t-GyKOgGYIBF2NhLXB1Yi03OTgzNTQyMjQ2ODI0MjQzyAEJ4AIAqAMBmAQAqgTXAU_Q2opTIGPaOKTRCsXeAaYMED3ib1TCZ5ixuJDckstW7R6C4cna228ghwT23L33wmrtd7k4AK29JSpMaHwPcSopKcluHJT9Xu2wdDZvqbY0YGu1l8MJDU7HTh9w2v9cabE8ezLEo11R6G0BamKxgYc-sMTBwefmEow-qREf0GKGvVxNBOFPWyIgP82EwSyAcxspSmTH2dE9y4fPeeaGL5iftddvc0DiloOFfaOURFTFvxpq97Qsa0VvEyxaf--TOlHRQ8QOEuNtQJUgJMIk-AqBzZwBq2wn4AQBgAb137bgl4qi3gWgBiE&num=1&sig=AOD64_2u85SWmNBtHvz1w0n2JP9HEOTG4g&client=ca-pub-7983542246824243&adurl=http://aax-us-pdx.amazon-adsystem.com/x/c/QXrjky07leMMJ4OQPFryjuoAAAFIB-ZP_AYAAAV4LzgNUg/;ord=4,997,534,412,131,091,332?
+ 
+  
+Rate this page
+☆☆☆☆☆
+Calculator Ideas
+Have an idea for a new RuneScape calculator? Tell us about it here.
+Files
+ Add a File
+62,195
+FILES ON THE WIKI
+RuneScape_clock 
+RuneScape_clock 
+File:Gnome_Coach_location 
+File:Draconic_jadinko 
+File:Baby_dragon_(red) 
+File:Fireworks
+File:Firecracker_thrown
+File:Diamond_jubilee_souvenir_…
+File:Crystal_chime_animation
+File:Bouquet
+File:Blow_bubbles
+File:Dwarf_champion_old
+File:Elf_champion_old
+See all files
+See all files >
+ 
+Recent Activity
+image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D
+Jobs
+edited by IP83.101.44.209 2 minutes ago
+image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D
+Antique lamp
+edited by IP83.101.44.209 4 minutes ago
+image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D
+Yaktwee stick
+edited by An anonymous user 6 minutes ago
+image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D
+Antique lamp (Misthalin Training Centre of Excellence)
+edited by IP83.101.44.209 9 minutes ago
+See more >
+ 
+Chat Room
+10
+RuneScape Wiki
+Join the Chat
+image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D
+image/gif;base64,R0lGODlhAQABAIABAAAAAP///yH5BAEAAAEALAAAAAABAAEAQAICTAEAOw%3D%3D
+50px-455939.png 
+50px-1649337.png 
+50px-5304421.png 
+50px-4797209.png 
+50px-1724320.png 
+50px-914564.png 
+50px-4143277.png 
+50px-898730.png 
+50px-1809630.png 
+50px-1929113.png 
+ 
+Around Wikia's network
+Random Wiki
+ 
+[ VIDEO GAMES ]
+About Community Central Careers Advertise API Contact Wikia Terms of Use Privacy Policy CC-BY-SA
+RuneScape_clock 
+Meet the Guardians of the Galaxy
+Video Games
+Entertainment
+Lifestyle
+RuneScape_clock    

@@ -1,0 +1,33 @@
+#create a way to calculate xp and focused attacks.
+#0.4 xp for focused, 0.133 xp for spread, 125% damage boness for focused
+#could the boness of the spacific attack equal the calculations, or should I add types?
+#create the player class
+
+#get the attack menu and keyconfig menus working with one another
+
+learn how threading works
+
+get the keyconfig menu working with the fight engine
+
+set mobs in the real game and connect fighting with it
+tree and bear
+
+add the death sequence and dropping items
+
+check if pyinstaller can be made into doing one .exe file, and a ton of files inside another big file, kind of like py2exe can.
+
+send the prototype out and get feedback:
+what are people's thoughts? Where should it go?
+
+redesine the room engine:
+make a class for rooms with a dict for exits, the key is the key or call that an item makes on the exit event
+on the room changer, you have a start event that is called after everything is loaded and an end event that is called before the player moves to a new place.
+I will create a directarry tree that looks like:
+locations/start/house.py
+objects/start/branch.py
+
+create a module that initiates pygame's screen and runs the for loop for events and returns the key in a tupal (key_name, state, mods)
+
+check out pygame docs and look at the wait function
+http://www.pygame.org/docs/ref/event.html
+

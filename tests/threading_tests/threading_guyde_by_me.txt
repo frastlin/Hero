@@ -1,0 +1,217 @@
+If you wish to make real-time combat like Swamp has or even for an ai in a side-scroller, in python, I don't think there is any way to do it other than by using threading. Many, many, many python applications use eather multiprocessing or multithreading, and both have their advantages and disadvantages, but IMO for games, you really need multithreading.
+
+
+So I am still not 100% on everything that has to do with threading, but here it goes:
+syntax:
+
+
+import threading
+
+
+def myfunkname(arg):
+    print arg
+
+
+my_thread = threading.Thread(target=myfunkname, args=("myfunk's arguments! With a comma",))
+
+
+The major functions in threading.Thread (The class you deal with for each thread but the main one).
+
+[h]__init__[/h]
+the thing you call with
+my_thread = threading.Thread(target=myfunkname, args=(my_arguments,))
+you need to put that extra ',' comma there for some reason...
+You can change it, you just need to put
+Thread.__init__()
+right under your __init__(self, argu, men, ts):
+But don't, it's too much work! :)
+
+
+[h]run():[/h]
+like __init__, don't bother, although if you do mess with __init__, you will probably wish to modify it so you can run it properly.
+
+
+[h]start()[/h]
+you call this for every start of a thread. After this function is called, your thread is on a roll and you can only stop it by the next functions!
+
+
+[h]daemon[/h]
+I didn't forget the (), it is a poor little variable :(... But it is not any little variable, it is a daemon!
+my_thread.daemon = True
+means that if you exit the main thread, my_thread will die without any warning. So my_thread could be talking to his girlfriend on the phone and if you press escape to close the game, my_thread will die! (So sad, it was getting a little racy :()
+
+
+[h]join()[/h]
+Don't use this like start! It is really not good practice, it is just what everyone does. It nullifies daemon and makes the main thread wait for it to finish. (well not the main thread, but the calling thread, but nvm about that).
+so if I said:
+my_thread.start()
+my_thread.join()
+I have to wait for my_thread to get off the phone before killing him, then what's the point? He's already hung up, so you don't get to talk to the girl :(!...
+So, if you wish to treat your threads as royalty, use
+join()
+but imo, daemons are a lot better!
+
+
+
+[h]Lock (acquire() and release())[/h]
+This is another class like Thread, so it has its own functions! in yourfunk you will wish to create an object like:
+lock = threading.Lock()
+then use the acquire() and release() functions, sandwiching the access to the variable.
+locks are used for changing variables that many threads are changing.
+so if I have my variable:
+dinner = 100
+
+
+
+and my main thread (me), calls everyone to dinner, I would have:
+mommy_thread
+daddy_thread
+my_thread
+girlfriend_thread #mmm...
+brother_thread
+
+
+Now if I just let them all eat at the same time, they would all be bumping into one another and grabbing food at the same time. In the real world this is generally what people do when the pizza arrives, but in python this can be a bad thing. When all those threads grab at the variable at the same time, the pieces don't end up getting subtracted from dinner, so you get a loaves and fishes effect.
+dinner = 83
+mommy_thread
+daddy_thread
+both grab one piece when dinner is at 83
+dinner is now 82 and both mommy and daddy threads have a piece!
+Great if you are poor like me and need to feed all those people, but not-so-good when everyone is on a diet and can only have 1/5th of the dinner (oops, daddy_thread got 21 pieces while still eating his 1/5th of the 100 pieces!)
+This is also really bad when you wish to have everyone write a letter to grandma!
+mommy would write "Dear grandma, I went to the pool today..."
+under it daddy wrote "dear grandma, I hate swimming and mommy makes me go to the pool to swim with her..."
+Although you see there is a problem in mommy and daddy's relationship in the first 2 lines, once brother my_thread and girlfriend start writing their stuff randomly in between everyone else's lines, life becomes crazy and grandma will end up banging a hole in her wall with her head, trying to figure out who is having problems with who!
+So this is why there is lock!
+if we wish to have daddy write, he needs to put a lock on the letter so no one else can write to it while he is writing his bit.
+The code looks like:
+
+import threading
+
+
+letter = []
+
+
+def writing_function(name, text):
+	global letter
+	lock = threading.Lock()
+	lock.acquire()
+	letter.append("Dear Grandma, this is %s and %s" % (name, text))
+	lock.release()
+
+daddy_thread = threading.Thread(target=writing_function, args=("daddy", "I hate going to the pool. When I stick my leg into the water, I just can't stop thinking about all the little kids who have peed in the water"))
+mommy_thread = threading.Thread(target=writing_function, args=("mommy", "I went to the pool today. It was so refreshing after a long day of work just to swim through the water.\nHope to see you soon\nMommy"))
+brother_thread = threading.Thread(target=writing_function, args=("brother", "I just got a longbow in swamp and I've been running through sub 2, killing all the zombies TTYS!"))
+
+daddy_thread.start()
+mommy_thread.start()
+brother_thread.start()
+
+
+for line in letter:
+	print line
+
+
+
+[h]RLock() ...[/h]
+This works great if the thread needs to write everything at once, but what if daddy needs to go to the bathroom in the middle of his section? 
+This is where relock comes into play!
+Daddy can take a break, go to the bathroom, make a call to his .... erm friend!... walk the dog and do what ever he wishes and mommy and brother need to wait till he is done!
+Here is what our new function looks like. Everything else is the same.
+
+
+def writing_function(name, text):
+	global letter
+	relock = threading.RLock()
+	relock.acquire()
+	letter.append("Dear Grandma, this is %s and " % name)
+	for line in text.splitlines():
+		relock.acquire()
+		letter.append(line)
+	for line in text.splitlines():
+		relock.release()
+	relock.release()
+
+
+
+[h]threading.Event() (set(), clear(), wait())[/h]
+Now girlfriend_thread does not want to sit at the counter looking at the letter, waiting for daddy to sign, she wants to be on her computer playing Paladin of the Sky! (That's smart!)
+So she sets up a fancy notification to let her know when the last person has finished. She knows that brother_thread is always the last, so she puts a little flag (argument e) on brother that lets her know when brother finishes. This requires brother to trigger the Event().set() function. Then girlfriend puts a check in her function that says:
+if the set function is given, write her little bit and then clear her notification so my_thread can't use it, otherwise, my_thread, dog_thread and any thread with the same notification she has (Event().wait() function) will hear that brother is done and can come down and write pretty little hearts and whatnot.
+So here is the new code:
+
+
+
+import threading
+
+
+letter = []
+event = threading.Event()
+lock = threading.Lock()
+
+
+def writing_function(name, text, e=None):
+	global letter
+	lock.acquire()
+	letter.append("Dear Grandma, this is %s and %s" % (name, text))
+	lock.release()
+	if e:
+		event.set()
+
+def line_writing():
+	global letter
+	if event.wait():
+		letter.append("\nxoxxo<3<3<3xxoxxoooo")
+		event.clear()
+
+daddy_thread = threading.Thread(target=writing_function, args=("daddy", "I hate going to the pool. When I stick my leg into the water, I just can't stop thinking about all the little kids who have peed in the water"))
+mommy_thread = threading.Thread(target=writing_function, args=("mommy", "I went to the pool today. It was so refreshing after a long day of work just to swim through the water.\nHope to see you soon\nMommy"))
+brother_thread = threading.Thread(target=writing_function, args=("brother", "I just got a longbow in swamp and I've been running through sub 2, killing all the zombies TTYS!", True))
+girlfriend_thread = threading.Thread(target=line_writing)
+
+#she needs to start before everyone so she can get the alarm when it goes off!
+girlfriend_thread.start()
+daddy_thread.start()
+mommy_thread.start()
+brother_thread.start()
+
+for line in letter:
+	print line
+
+
+
+[h]threading.Timer() (start(), cancel())[/h]
+my_thread is not as smart as girlfriend_thread, but he also has set up a notification on his phone. His lets him know after a set time that he should write his bit. He uses a timer.
+The threading timer is a very timid thread, it can't be called with a join() function and the main thread will exit while it is still running. Also, anyone can cancel it.
+so my_thread is taking a chance that the rest of the threads won't be mean.
+Here is what he did. He just changed the bottom half, under girlfriend_thread's line_writing function, but he also included the time.sleep function, because otherwise the letter would be sent without him!
+
+#right under line_writing
+def my_function(text):
+	global letter
+	letter.append("\n\nHey grandma, %s" % text)
+
+
+
+my_thread = threading.Timer(2, my_function, ("I'm going crazy playing Castaways! Aprone has made the new map really really hard!",))
+daddy_thread = threading.Thread(target=writing_function, args=("daddy", "I hate going to the pool. When I stick my leg into the water, I just can't stop thinking about all the little kids who have peed in the water"))
+mommy_thread = threading.Thread(target=writing_function, args=("mommy", "I went to the pool today. It was so refreshing after a long day of work just to swim through the water.\nHope to see you soon\nMommy"))
+brother_thread = threading.Thread(target=writing_function, args=("brother", "I just got a longbow in swamp and I've been running through sub 2, killing all the zombies TTYS!", True))
+girlfriend_thread = threading.Thread(target=line_writing)
+
+my_thread.start()
+girlfriend_thread.start()
+daddy_thread.start()
+mommy_thread.start()
+brother_thread.start()
+
+#making everyone wait, that's so diva!
+import time
+time.sleep(3)
+for line in letter:
+	print line
+
+
+
+This is pretty much most of python's threading module. The other stuff is a little more advanced (there is a lock function you can set a limit on, there are some checks to see how many threads are still active, there are some more things you can do with locks... but the above functions are the important ones. Google the function like "using threading.RLock() in python" to read tutorials and answers on stackoverflow!
+[url=https://docs.python.org/2/library/threading.html#event-objects]Here is the python refference just fyi![/url]

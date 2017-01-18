@@ -1,0 +1,94 @@
+start is the grassy place. The player goes into the house, finds a note and the items will show up and the dundgen will show up.  the user has to find a stick in the forest from the tree, go into the desert, get the piece of cloth, put the piece of cloth on the stick, find a piece of really sharp flint on the lake shore and get some iron and oil from the broken lamp they find in the grass land. Then they soke the cloth in the oil, light the torch and get the sword from the house and because it is night (it becomes night when the player lights the torch), the sword doesn't decentagrate. They then go into the cave, scare away the bair by cutting the rope holding his bea hive and having it fall on his head and rescue the princess.
+
+start = Room("start", "Grass and trees are around you. There is a little house here and there is a whole world all around you.")
+house = Room("house", "You stand in a dimly lit room. A table is against the north wall and a bed is along the west wall. The door is to the south and a window is to the east.")
+grassland = Room("grassland", """Hot air presses down upon the sunbaked sand and the ground is littered with small succulents.The little house is to the north and far to the north west you see a dark spot that may be trees.""")
+forest = Room("forest", "Tall trees have grown quite close together here. The forest continues off to the north and some broken masonry can be seen to the west.")
+ruins = Room("ruins", """A few sad looking moss-covered pillers poke up out of what looks like the remains of a once grand building. There is a dark hole that leads under the ruins. The trees are all around and one adventurace tree has taken root in the old stone.""")
+cave = Room("cave", """This room is very dark and the musty smell of some creature wafts in from farther on. Rusty chains litter the floor and a few iron bars still mark where there used to be cells.""")
+lair = Room("lair", """The smell of inhabitation is really strong here. There is a buzzing from above and a little bit of light shines down. A long rope is attached to an old ring in the floor and there are crude stone steps leading up. There is a smoothe rock slab to the east and a case made of glass and gold to the north west.""")
+desert = Room("desert", """It is hot and dry in this sandy land. The wind is blowing and the sun is reflecting off every surface. The air is so hot it feals like water.""")
+lake = Room("lake", """A rectangular lake streches to the north farther than the eye can see. The forest is to the west and a sandy beech goes on to the east. A collection of really sharp and jaggid rocks litters the shore.""")
+done = Room("done", "Congrats! You kissed the princess and saved the kingdom!")
+
+There once was in time long past
+ledgends of a heavenly lass
+So fair was she in face and heart
+that kingdoms trembled at her fart.
+one day it came to pass at mid-summer's eve
+that Fegar Lionhart, most respected in the land,
+asked her hand to charush and keep.
+and with a distracted air his love did speak:
+'Yeah dude... forget it bro.'
+For one whole minute the cort failed to blink
+where those words came from nobody could think.
+The king sent for wise men and scollars of the past,
+but nowhere was a 'dude' or 'bro' ever seen.
+When she was asked about what those words did mean, the beauty replied:
+'Yo Face!'
+till on one stormy night an old man she did meet.
+he called her a babe, a homy in disguise
+they talked about totes and fabs and besties all night.
+The next day they were gon, no trace but this letter if letter it was, full of strange words
+'chillaxin with Gpa @ the cabin'
+even werse than before.
+The king did proclaim that there never was a girl
+who talked of strange things never heard of in the world.
+Soon the land forgot the beauty they knew,
+but one man was left who said he would find
+and vanquish the two.
+He studdied the sword, spells and prayers
+and soon he was head of the wizards and thought he could do
+what the king never thought could be done
+find the unknown girl he once did lose.
+So he traveled and searched till he found this house.
+There he did meet his beauty, but much to his dismay
+she yelled words he never could say
+'bugger off!'
+He thought she was addled
+and kindly he said:
+'thou art my wife by law and by right
+so come along now or I'll stop being nice.'
+She screamed and fot with tooth and nale but sir Lionhart
+with bareley a thought
+placed her under a magic sleepping guard 
+It was at this point
+when all hope was lost
+the old man did come and change the fate of our beauty's next night.
+The man grinned,
+showing two rows of white teeth
+and he chanted
+these words no wizard would speak:
+'you're as sharp as they're made,
+but as dumb as a spade
+you shine so brightly
+you'll melt in the day
+you'll hang on the wall
+and will never fall
+till one comes and saves the made.'
+With an implosion of space and a strange look on his face
+ the hero did shrink and fall on the ground with an audible plink.
+The old man grabbed the hilt and placed it by the door
+and stuck it inside where the blade only would be touched by the night.
+The beauty she lay
+asleep and cold
+no matter what he did the old man couldn't make
+the beauty awake.
+She was under a spell
+from ledgends of old
+waiting for a hero to break the hold
+of her ageless sleep.
+and the sword of knight
+that no longer did breathe,
+hung on the wall
+awating the hero to be
+The old man took the beauty and hid her away
+safe behind a monster
+that only wisdom could beat
+Thus sleeps the beauty
+of ledgends passed
+awaiting the hero who
+will come at last
+
+house
+This is a sturdy building made out of a very strong wood. There are plants grown over much of the wood, but strangely enough there is no rot in the logs. There is a door on this side and several large trees  hanging over the roof.

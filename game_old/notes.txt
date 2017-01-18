@@ -1,0 +1,44 @@
+There is setup2.py in hero_test that needs to be used to make a .exe file of this.
+Just remember that you need to copy sounds!
+
+add more objects and make finding each item a little more dificult.
+consider:
+adding a pixy in the tree
+add a rattle snake or cat you need to avoid or befriend
+
+make a sand castle in the desert
+make several rocks with different descriptions
+
+
+add ctrl to stop sapi and add different speed to sapi
+
+Combat!
+make a turn based system that has a menu for combat.
+menu will be something like:
+stab t
+slash s
+defend d
+special x
+no looping, just repeat the focused option.
+If they press the hot-key their mode will change to that.
+The modes do different dammage or defend against different attacks.
+They can view info on each option and change the hot-key by pressing the applications key.
+The hot-key will activate the option.
+each weapon has its own options
+
+The bear will have 3 attacks:
+claw (fast)
+eviserate (slow)
+rage (increases dammage by 10% for 10 seconds but takes up 1/3 of the special attack bar)
+
+before each attack the bear will make a sound so the player knows what mode to switch to
+
+player has 4 options:
+attack (focus on dammage)
+parry (defends against claw)
+dodge (defends against eviserate, but has a little cool-down before you can do anything else as you get closer in)
+special (Will cut the chain if the bear is under 30% HP
+
+player can press h or shift h to hear their health or the bear's health
+
+When the player takes the sword, they will be placed in a different world to practice using the sword. The spearit of the old man comes and casts an ilusion over them.
